@@ -1,0 +1,9 @@
+<templateSet group="subin-android">
+  <template name="tag" value="/** Log tag */&#10;private static final String TAG = $className$.class.getSimpleName();" description="Create log tag constant" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>
