@@ -1,8 +1,14 @@
 <templateSet group="subin-android">
   <template name="tag" value="/** Log tag */&#10;private static final String TAG = $className$.class.getSimpleName();" description="Create log tag constant" toReformat="false" toShortenFQNames="true">
-    <variable name="className" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <variable name="className" expression="className()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="enumFindById" value="/**&#10; * Finds an instance of $enumName$ by id.&#10; * &#10; * @param id&#10; * @return {@linkplain $enumName$} if match found, else {@code null}&#10; */&#10;public static $enumName$ findById(int id) {&#10;    $enumName$[] values = values();&#10;    $enumName$ instance = null;&#10;    for (int i = 0; i &lt; values.length; i++) {&#10;        instance = values[i];&#10;        if (instance.id == id) {&#10;            return instance;&#10;        }&#10;    }&#10;    return null;&#10;}" description="Adds findById(int id) to an enum" toReformat="true" toShortenFQNames="true">
+    <variable name="enumName" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
