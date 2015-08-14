@@ -12,4 +12,17 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
+  <template name="publicKey" value="public static final String KEY_$value$ = &quot;$value$&quot;;" description="Create a public key constant" toReformat="false" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="publicIntKey" value="public static final int KEY_$key$ = $value$;" description="Creates a public int key" toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="0" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
 </templateSet>
